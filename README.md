@@ -18,12 +18,13 @@ Deve-se utilizar nossa API para construir uma simples aplicação WEB.
 A Api utiliza Basic Auth para aceitar as requisiscoes, deve-se codificar em base64 as chaves no formato "apikey:apisecret" e enviar no Header "Authentication"
 
 ex:
+```javascript
 {
 	Authentication: 'Basic u183gbnda=='	
 }
+```
 
-
-O endpoit para acesso da API é api.pipz.io/v1/
+O endpoit para acesso da API é ```api.pipz.io/v1/```
 
 * GET /contact - Lista os contatos;
 * GET /contact/:id - Retorna as informacoes do contato;
