@@ -24,7 +24,7 @@ ex:
 }
 ```
 
-O endpoit para acesso da API é ```api.pipz.io/v1/```
+O endpoint para acesso da API é ```api.pipz.io/v1/```
 
 * GET /contact - Lista os contatos;
 * GET /contact/:id - Retorna as informacoes do contato;
