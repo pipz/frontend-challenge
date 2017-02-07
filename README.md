@@ -20,7 +20,7 @@ A Api utiliza Basic Auth para aceitar as requisiscoes, deve-se codificar em base
 ex:
 ```javascript
 {
-	Authentication: 'Basic u183gbnda=='	
+	Authorization: 'Basic u183gbnda=='	
 }
 ```
 
