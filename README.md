@@ -15,7 +15,7 @@ Deve-se utilizar nossa API para construir uma simples aplicação WEB.
 
 ## Detalhes da API
 
-A Api utiliza Basic Auth para aceitar as requisiscoes, deve-se codificar em base64 as chaves no formato "apikey:apisecret" e enviar no Header "Authentication"
+A Api utiliza Basic Auth para aceitar as requisiscoes, deve-se codificar em base64 as chaves no formato "apikey:apisecret" e enviar no Header "Authorization"
 
 ex:
 ```javascript
