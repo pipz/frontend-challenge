@@ -1,0 +1,48 @@
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+  <md-toolbar class="md-tall md-hue-2">
+    <span flex></span>
+    <div layout="column"
+      class="md-toolbar-tools-bottom inset user-info-container">
+      <user-avatar></user-avatar>
+      <span></span>
+      <div>Firstname Lastname</div>
+      <div>email@domainname.com</div>
+    </div>
+  </md-toolbar>
+  <md-list>
+  <md-item ng-repeat="item in menu">
+    <a>
+      <md-item-content ui-sref="contacts"
+        md-ink-ripple
+        layout="row"
+        layout-align="start center">
+        <div class="inset">
+          <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+        </div>
+        <div class="inset">{{item.title}}
+        </div>
+      </md-item-content>
+    </a>
+  </md-item>
+</md-list>
+</md-sidenav>
+<div layout="column" class="relative" layout-fill role="main">
+  <div ui-view="content" layout="column" layout-fill layout-padding>
+    <!-- <empty-state message="message" ng-if="!contacts.length" /> -->
+    <md-card flex-gt-sm="90" flex-gt-md="80" ng-show="contacts.length">
+      <md-card-content>
+        <md-list>
+          <md-item contact-card
+            ng-repeat="contact in contacts"
+            on-edit="onEdit"
+            on-remove="onRemove"
+            contact="contact">
+          </md-item>
+        </md-list>
+      </md-card-content>
+    </md-card>
+    <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
+      <ng-md-icon icon="add"></ng-md-icon>
+    </md-button>
+  </div>
+</div>

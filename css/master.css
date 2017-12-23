@@ -1,0 +1,28 @@
+.contacts-container {
+  display: flex;
+  height: 100%;
+}
+
+.dialog-button-section {
+  display: flex;
+  justify-content: space-around;
+  text-transform: 14px;
+  position: relative;
+  top: 28px;
+}
+
+.dialog-button-section button {
+  width: 150px;
+  margin: 0 5px;
+}
+
+.user-info-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.dialog-header {
+  padding: 12px;
+  text-transform: uppercase;
+}
