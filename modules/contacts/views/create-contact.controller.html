@@ -1,0 +1,12 @@
+<div style="padding: 10px;">
+  <md-content layout-gt-sm="row" layout-padding>
+    <div>
+      <md-input-container ng-repeat="field in fields">
+        <label>{{field.title}}</label>
+        <input ng-model="contact[field.name]">
+      </md-input-container>
+      <button type="button" ng-click="create()">Criar Contato</button>
+      <button type="button" ui-sref="app.contacts.list">voltar</button>
+    </div>
+  </md-content>
+</div>

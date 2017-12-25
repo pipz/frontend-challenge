@@ -1,0 +1,13 @@
+<md-item-content>
+  <div class="md-tile-left inset" hide-sm>
+    <user-avatar></user-avatar>
+  </div>
+  <div class="md-tile-content">
+    <h3>{{ contact.name }}</h3>
+    <h4>{{ contact.email }}</h4>
+    <h4>{{ contact.twitter }}</h4>
+    <h4>{{ contact.phone }}</h4>
+  </div>
+</md-item-content>
+<md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+<md-divider hide-gt-sm ng-if="!$last"></md-divider>
