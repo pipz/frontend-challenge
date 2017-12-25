@@ -9,15 +9,36 @@
     'ngInject';
 
     $stateProvider
-      .state('contacts', {
-        url: '',
+      .state('app.contacts', {
+        url: '/contacts',
+        abstract: true
+      })
+      .state('app.contacts.list', {
+        url: '/list',
         views: {
-          '@': {
-            templateUrl: 'modules/contacts/views/contacts.controller.html',
-            controller: 'contactsController'
+          'content@app': {
+            templateUrl: 'modules/contacts/views/list-contact.controller.html',
+            controller: 'listContactController'
+          }
+        }
+      })
+      .state('app.contacts.details', {
+        url: '/:userId',
+        views: {
+          'content@app': {
+            templateUrl: 'modules/contacts/views/detail-contact.controller.html',
+            controller: 'detailContactController'
+          }
+        }
+      })
+      .state('app.contacts.create', {
+        url: '/create',
+        views: {
+          'content@app': {
+            templateUrl: 'modules/contacts/views/create-contact.controller.html',
+            controller: 'createContactController'
           }
         }
       });
   }
-
 })();

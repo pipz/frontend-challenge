@@ -6,24 +6,38 @@
     .controller('createContactController', createContactController);
 
     function createContactController (
-      $rootScope,
       $scope,
+      $state,
       $mdDialog,
       contactsService,
     ) {
       'ngInject';
 
+      $scope.fields = [];
+      $scope.contact = {};
       $scope.create = create;
       $scope.close = close;
 
-      function close () {
-        $mdDialog.cancel();
+      init();
+
+      function init() {
+        contactsService.getContactFields().then(setContactFields);
+      }
+
+      function setContactFields (fields) {
+        fields.forEach(function (item) {
+          if (item.group === 'Details' || item.group === 'Social') {
+            var name = item.name.substring(8);
+            var field = { name: name, title: item.label };
+            $scope.fields.push(field);
+          }
+        });
       }
 
       function create () {
         contactsService.createContact($scope.contact).then(function (response) {
-          $rootScope.$broadcast('update_list');
-        }).finally($mdDialog.cancel);
+          $state.go('app.contacts.list');
+        });
       }
   }
 })();

@@ -10,7 +10,7 @@
   </md-toolbar>
   <md-list>
     <md-item ng-repeat="item in menu">
-      <a>
+      <a ui-sref="{{item.link}}">
         <md-item-content md-ink-ripple layout="row" layout-align="start center">
           <div class="inset">
             <ng-md-icon icon="{{item.icon}}"></ng-md-icon>
@@ -23,4 +23,4 @@
   </md-list>
 </md-sidenav>
 
-<div ui-view="content"></div>
+<div ui-view="content" flex></div>

@@ -3,9 +3,9 @@
 
   angular
     .module('app.contacts')
-    .controller('contactsController', contactsController);
+    .controller('listContactController', listContactController);
 
-  function contactsController (
+  function listContactController (
     $rootScope,
     $scope,
     $mdBottomSheet,
