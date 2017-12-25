@@ -3,10 +3,10 @@
     <user-avatar></user-avatar>
   </div>
   <div class="md-tile-content">
-    <h3>{{ contact.name }}</h3>
-    <h4>{{ contact.email }}</h4>
-    <h4>{{ contact.twitter }}</h4>
-    <h4>{{ contact.phone }}</h4>
+    <h3>{{contact.name || "Não informado"}}</h3>
+    <h4>{{contact.email || "Não informado"}}</h4>
+    <h4>{{contact.twitter || "Não informado"}}</h4>
+    <h4>{{contact.phone || "Não informado"}}</h4>
   </div>
 </md-item-content>
 <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
