@@ -2,9 +2,9 @@
   'use strict';
 
   angular.module('app', [
-    'restangular',
     'ngMaterial',
     'ngMdIcons',
+    'restangular',
     'ui.router',
     'app.core',
     'app.theme',

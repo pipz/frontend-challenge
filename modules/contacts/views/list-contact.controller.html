@@ -1,0 +1,16 @@
+<md-card flex-gt-sm="90" flex-gt-md="80" ng-show="contacts.length">
+  <md-card-content>
+    <md-list ng-if="contacts">
+      <md-item contact-card
+        ng-repeat="contact in contacts"
+        contact="contact"
+        ui-sref="app.contacts.details({userId: contact.id})">
+      </md-item>
+    </md-list>
+  </md-card-content>
+</md-card>
+<md-button class="md-fab md-fab-bottom-right"
+  aria-label="Add"
+  ui-sref="app.contacts.create">
+  <ng-md-icon icon="add"></ng-md-icon>
+</md-button>

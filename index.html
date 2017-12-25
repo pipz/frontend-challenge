@@ -9,6 +9,8 @@
   </head>
 
   <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+  <link rel="stylesheet" href="node_modules/angular-material/modules/js/dialog/dialog-default-theme.css">
+  <link rel="stylesheet" href="node_modules/angular-material/modules/js/dialog/dialog.css">
 
   <body>
     <ui-view class="contacts-container"></ui-view>
@@ -19,20 +21,24 @@
   <script src="node_modules/angular-aria/angular-aria.js"></script>
   <script src="node_modules/angular-messages/angular-messages.js"></script>
   <script src="node_modules/angular-material/angular-material.js"></script>
+  <script src="node_modules/angular-material/modules/js/dialog/dialog.js"></script>
   <script src="node_modules/angular-material-icons/angular-material-icons.js"></script>
   <script src="node_modules/underscore/underscore.js"></script>
   <script src="node_modules/restangular/src/restangular.js"></script>
   <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="node_modules/jsondiffpatch/public/build/jsondiffpatch.js"></script>
   <script  src="app.js"></script>
   <script  src="modules/core/module.js"></script>
   <script  src="modules/auth/module.js"></script>
   <script  src="modules/contacts/module.js"></script>
   <script  src="modules/theme/module.js"></script>
+  <script  src="modules/core/route.config.js"></script>
   <script  src="modules/contacts/route.config.js"></script>
-  <script  src="modules/contacts/controllers/contacts.controller.js"></script>
+  <script  src="modules/core/controllers/menu.controller.js"></script>
+  <script  src="modules/contacts/controllers/list-contact.controller.js"></script>
   <script  src="modules/theme/controllers/dialog.controller.js"></script>
   <script  src="modules/contacts/controllers/create-contact.controller.js"></script>
-  <script  src="modules/contacts/controllers/edit-contact.controller.js"></script>
+  <script  src="modules/contacts/controllers/detail-contact.controller.js"></script>
   <script  src="modules/theme/directives/user-avatar.directive.js"></script>
   <script  src="modules/theme/directives/empty-state.directive.js"></script>
   <script  src="modules/contacts/directives/contact-card.directive.js"></script>
