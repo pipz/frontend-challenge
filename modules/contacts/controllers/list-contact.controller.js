@@ -8,7 +8,6 @@
   function listContactController (
     $mdBottomSheet,
     $mdSidenav,
-    $mdDialog,
     contactsService
   ) {
     'ngInject';

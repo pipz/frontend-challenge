@@ -6,7 +6,6 @@
     .directive('contactCard', contactCard);
 
   function contactCard(
-    $mdDialog,
     contactsService
   ) {
     'ngInject';

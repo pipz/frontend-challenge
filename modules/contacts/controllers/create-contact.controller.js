@@ -7,7 +7,6 @@
 
     function createContactController (
       $state,
-      $mdDialog,
       contactsService,
     ) {
       'ngInject';
