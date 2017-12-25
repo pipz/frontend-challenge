@@ -1,15 +1,18 @@
-<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+<md-sidenav layout="column"
+  class="md-sidenav-left md-whiteframe-z2"
+  md-component-id="left"
+  md-is-locked-open="$mdMedia('gt-md')">
   <md-toolbar class="md-tall md-hue-2">
     <span flex></span>
     <div layout="column" class="md-toolbar-tools-bottom inset">
       <user-avatar></user-avatar>
       <span></span>
-      <div>{{user.name}}</div>
-      <div>{{user.email}}</div>
+      <div>{{vm.user.name}}</div>
+      <div>{{vm.user.email}}</div>
     </div>
   </md-toolbar>
   <md-list>
-    <md-item ng-repeat="item in menu">
+    <md-item ng-repeat="item in vm.menu">
       <a ui-sref="{{item.link}}">
         <md-item-content md-ink-ripple layout="row" layout-align="start center">
           <div class="inset">
@@ -22,5 +25,4 @@
     </md-item>
   </md-list>
 </md-sidenav>
-
 <div ui-view="content" flex></div>

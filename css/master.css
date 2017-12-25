@@ -26,3 +26,11 @@
   padding: 12px;
   text-transform: uppercase;
 }
+
+.menu-content-container {
+  padding: 10px;
+}
+
+.fields-container {
+  width: 100%;
+}

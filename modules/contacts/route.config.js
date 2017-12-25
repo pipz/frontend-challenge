@@ -18,7 +18,8 @@
         views: {
           'content@app': {
             templateUrl: 'modules/contacts/views/list-contact.controller.html',
-            controller: 'listContactController'
+            controller: 'listContactController',
+            controllerAs: 'vm'
           }
         }
       })
@@ -27,7 +28,8 @@
         views: {
           'content@app': {
             templateUrl: 'modules/contacts/views/detail-contact.controller.html',
-            controller: 'detailContactController'
+            controller: 'detailContactController',
+            controllerAs: 'vm'
           }
         }
       })
@@ -36,7 +38,8 @@
         views: {
           'content@app': {
             templateUrl: 'modules/contacts/views/create-contact.controller.html',
-            controller: 'createContactController'
+            controller: 'createContactController',
+            controllerAs: 'vm'
           }
         }
       });

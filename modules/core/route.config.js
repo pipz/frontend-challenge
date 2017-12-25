@@ -15,7 +15,8 @@
         views: {
           '@': {
             templateUrl: 'modules/core/views/app-container.html',
-            controller: 'menuController'
+            controller: 'menuController',
+            controllerAs: 'vm'
           }
         }
       })
