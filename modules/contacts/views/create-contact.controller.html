@@ -1,11 +1,11 @@
-<div style="padding: 10px;">
+<div class="menu-content-container">
   <md-content layout-gt-sm="row" layout-padding>
-    <div>
-      <md-input-container ng-repeat="field in fields">
+    <div class="fields-container">
+      <md-input-container ng-repeat="field in vm.fields">
         <label>{{field.title}}</label>
-        <input ng-model="contact[field.name]">
+        <input ng-model="vm.contact[field.name]">
       </md-input-container>
-      <button type="button" ng-click="create()">Criar Contato</button>
+      <button type="button" ng-click="vm.create()">Criar Contato</button>
       <button type="button" ui-sref="app.contacts.list">voltar</button>
     </div>
   </md-content>

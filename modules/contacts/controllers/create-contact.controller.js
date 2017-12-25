@@ -6,17 +6,18 @@
     .controller('createContactController', createContactController);
 
     function createContactController (
-      $scope,
       $state,
       $mdDialog,
       contactsService,
     ) {
       'ngInject';
 
-      $scope.fields = [];
-      $scope.contact = {};
-      $scope.create = create;
-      $scope.close = close;
+      var vm = this;
+
+      vm.fields = [];
+      vm.contact = {};
+      vm.create = create;
+      vm.close = close;
 
       init();
 
@@ -29,13 +30,13 @@
           if (item.group === 'Details' || item.group === 'Social') {
             var name = item.name.substring(8);
             var field = { name: name, title: item.label };
-            $scope.fields.push(field);
+            vm.fields.push(field);
           }
         });
       }
 
       function create () {
-        contactsService.createContact($scope.contact).then(function (response) {
+        contactsService.createContact(vm.contact).then(function (response) {
           $state.go('app.contacts.list');
         });
       }

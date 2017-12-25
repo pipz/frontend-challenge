@@ -1,8 +1,8 @@
-<md-card flex-gt-sm="90" flex-gt-md="80" ng-show="contacts.length">
+<md-card flex-gt-sm="90" flex-gt-md="80" ng-show="vm.contacts.length">
   <md-card-content>
-    <md-list ng-if="contacts">
+    <md-list ng-if="vm.contacts">
       <md-item contact-card
-        ng-repeat="contact in contacts"
+        ng-repeat="contact in vm.contacts"
         contact="contact"
         ui-sref="app.contacts.details({userId: contact.id})">
       </md-item>

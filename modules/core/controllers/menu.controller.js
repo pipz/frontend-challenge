@@ -5,15 +5,15 @@
     .module('app.core')
     .controller('menuController', menuController);
 
-  function menuController ($scope) {
+  function menuController () {
     'ngInject';
 
-    $scope.user = {
+    var vm = this;
+    vm.user = {
       name: "Yuri Reis",
       email: "yuri.reis@msn.com"
     };
-
-    $scope.menu = [{
+    vm.menu = [{
       link : 'app.contacts.list',
       title: 'Contatos',
       icon: 'group'
