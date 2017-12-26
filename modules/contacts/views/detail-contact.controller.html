@@ -1,0 +1,25 @@
+<div class="menu-content-container" ng-if="vm.fields && vm.contact">
+  <md-content layout-gt-sm="row" layout-padding>
+    <div class="fields-container">
+      <md-input-container ng-repeat="field in vm.fields">
+        <div class="">
+          <label>{{field.title}}</label>
+          <button ng-if="vm.fieldIsChanged(field)"
+            ng-click="vm.update(field)"
+            ng-disabled="vm.disableUpdate || !vm.contact[field.name]">
+            Alterar
+          </button>
+          <input ng-model="vm.contact[field.name]" style="width: 100%;">
+        </div>
+      </md-input-container>
+      <md-button class="md-raised md-primary"
+        ui-sref="app.contacts.list">
+        Voltar
+      </md-button>
+      <md-button class="md-warn small-text"
+        ng-click="vm.remove()">
+        Remover Contato
+      </md-button>
+    </div>
+  </md-content>
+</div>

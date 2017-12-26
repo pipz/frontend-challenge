@@ -1,0 +1,133 @@
+.contacts-container {
+  display: flex;
+  height: 100%;
+}
+
+.card-content {
+  cursor: pointer;
+  background: white;
+  transition: background 1s;
+}
+
+.dialog-button-section {
+  display: flex;
+  justify-content: space-around;
+  text-transform: 14px;
+  position: relative;
+  top: 28px;
+}
+
+.dialog-button-section button {
+  width: 150px;
+  margin: 0 5px;
+}
+
+.user-info-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.dialog-header {
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.menu-content-container {
+  padding: 10px;
+}
+
+.fields-container {
+  width: 100%;
+}
+
+.main-card {
+  margin: 25px 0;
+}
+
+.welcome-message {
+  font-size: 30px;
+  text-align: center;
+}
+
+.welcome-description {
+  text-align: center;
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-button {
+  text-align: center;
+  border-radius: 5%;
+  border: 2px solid;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  margin: 0 6px;
+  transition: background .7s;
+}
+
+.app-button:hover {
+  background: gainsboro;
+}
+
+.app-button i {
+  font-size: 110px;
+}
+
+.app-button span {
+  text-transform: uppercase;
+}
+
+.card-details-message {
+  padding: 10px;
+  opacity: 0;
+  background: rgb(255,64,129);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  margin: 4px 0 4px 4px;
+  transition: opacity .5s, width 1s;
+  text-transform: uppercase;
+}
+
+.icon-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.md-button.md-fab {
+  padding: 0 5px;
+  width: 56px;
+  transition: border-radius 1s, width 1s;
+}
+
+.md-button > div {
+  opacity: 0;
+  width: 0px;
+  transition: opacity 1s, width 1s;
+}
+
+.md-button:hover > div {
+  opacity: 1;
+  width: 160px;
+}
+
+.md-button.md-fab:hover {
+  border-radius: 0%;
+  width: 160px;
+}
+
+.card-active {
+  background: rgba(184,184,184, .1);
+  border: 2px solid rgb(255,64,129);
+}
+
+.active {
+  opacity: 1;
+}

@@ -1,0 +1,39 @@
+<md-dialog>
+  <md-content class="md-padding">
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>Nome</label>
+        <input ng-model="contact.name">
+      </md-input-container>
+      <md-input-container flex>
+        <label>E-mail</label>
+        <input ng-model="contact.email">
+      </md-input-container>
+    </div>
+    <div layout layout-sm="column">
+      <md-input-container flex>
+        <label>Twitter</label>
+        <input ng-model="contact.twitter">
+      </md-input-container>
+      <md-input-container flex>
+        <label>Telefone</label>
+        <input ng-model="contact.phone">
+      </md-input-container>
+    </div>
+    <section class="dialog-button-section"
+      layout="row"
+      layout-sm="column"
+      layout-align="center center"
+      layout-wrap>
+      <md-button class="md-raised md-primary"
+        ng-click="create()">Criar
+      </md-button>
+      <md-button class="md-raised md-warn"
+        ng-click="close()">Cancelar
+      </md-button>
+    </section>
+  </md-content>
+  <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+    <div class="dialog-header">Criar Contato</div>
+  </section>
+</md-dialog>

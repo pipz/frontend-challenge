@@ -1,0 +1,19 @@
+<md-item-content class="card-content"
+  ng-class="{ 'card-active': active }"
+  ng-init="active = false"
+  ng-mouseover="active = true"
+  ng-mouseleave="active = false">
+  <div class="md-tile-left inset" hide-sm>
+    <user-avatar></user-avatar>
+  </div>
+  <div class="md-tile-content">
+    <h3>{{contact.name || "Não informado"}}</h3>
+    <h4>{{contact.email || "Não informado"}}</h4>
+    <h4>{{contact.twitter || "Não informado"}}</h4>
+    <h4>{{contact.phone || "Não informado"}}</h4>
+  </div>
+  <div class="card-details-message"
+    ng-class="{ 'active': active }">
+    Clique para ver mais detalhes {{ scope.active }}
+  </div>
+</md-item-content>

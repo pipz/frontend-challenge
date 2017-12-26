@@ -1,0 +1,18 @@
+<div class="menu-content-container">
+  <md-content layout-gt-sm="row" layout-padding>
+    <div class="fields-container">
+      <md-input-container ng-repeat="field in vm.fields">
+        <label>{{field.title}}</label>
+        <input ng-model="vm.contact[field.name]">
+      </md-input-container>
+      <md-button class="md-raised md-primary"
+        ng-click="vm.create()">
+        Criar Contato
+      </md-button>
+      <md-button class="md-raised"
+        ui-sref="app.contacts.list">
+        Voltar
+      </md-button>
+    </div>
+  </md-content>
+</div>
