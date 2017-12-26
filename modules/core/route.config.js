@@ -5,8 +5,14 @@
     .module('app.core')
     .config(config);
 
-  function config($stateProvider) {
+  function config(
+    $urlRouterProvider,
+    $stateProvider
+  ) {
     'ngInclude';
+
+    $urlRouterProvider
+      .when('', 'main');
 
     $stateProvider
       .state('app', {
