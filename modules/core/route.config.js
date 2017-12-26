@@ -30,7 +30,9 @@
         url: '/main',
         views: {
           'content@app': {
-            templateUrl: 'modules/core/views/app-main.html'
+            templateUrl: 'modules/core/views/app-main.html',
+            controller: 'menuController',
+            controllerAs: 'vm'
           }
         }
       });

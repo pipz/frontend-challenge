@@ -1,4 +1,8 @@
-<md-item-content>
+<md-item-content class="clickable-content"
+  ng-class="{ 'card-active': active }"
+  ng-init="active = false"
+  ng-mouseover="active = true"
+  ng-mouseleave="active = false">
   <div class="md-tile-left inset" hide-sm>
     <user-avatar></user-avatar>
   </div>
@@ -8,6 +12,8 @@
     <h4>{{contact.twitter || "Não informado"}}</h4>
     <h4>{{contact.phone || "Não informado"}}</h4>
   </div>
+  <div class="card-details-message"
+    ng-class="{ 'active': active }">
+    Clique para ver mais detalhes {{ scope.active }}
+  </div>
 </md-item-content>
-<md-divider md-inset hide-sm ng-if="!$last"></md-divider>
-<md-divider hide-gt-sm ng-if="!$last"></md-divider>
