@@ -5,8 +5,14 @@
         <label>{{field.title}}</label>
         <input ng-model="vm.contact[field.name]">
       </md-input-container>
-      <button type="button" ng-click="vm.create()">Criar Contato</button>
-      <button type="button" ui-sref="app.contacts.list">voltar</button>
+      <md-button class="md-raised md-primary"
+        ng-click="vm.create()">
+        Criar Contato
+      </md-button>
+      <md-button class="md-raised"
+        ui-sref="app.contacts.list">
+        Voltar
+      </md-button>
     </div>
   </md-content>
 </div>

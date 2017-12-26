@@ -12,8 +12,14 @@
           <input ng-model="vm.contact[field.name]" style="width: 100%;">
         </div>
       </md-input-container>
-      <button type="button" ui-sref="app.contacts.list">voltar</button>
-      <button type="button" ng-click="vm.remove()">Remover</button>
+      <md-button class="md-raised md-primary"
+        ui-sref="app.contacts.list">
+        Voltar
+      </md-button>
+      <md-button class="md-warn small-text"
+        ng-click="vm.remove()">
+        Remover Contato
+      </md-button>
     </div>
   </md-content>
 </div>
