@@ -24,11 +24,13 @@
     "angular-material-icons": "^0.7.1",
     "angular-messages": "^1.6.8",
     "angular-ui-router": "^1.0.3",
+    "gulp": "github:gulpjs/gulp#4.0",
     "jsondiffpatch": "^0.2.5",
     "restangular": "^1.6.1",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "angular-lint": "0.0.2"
+    "angular-lint": "0.0.2",
+    "gulp-webserver": "^0.9.1"
   }
 }
