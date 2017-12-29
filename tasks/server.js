@@ -6,7 +6,7 @@ const webserver   = require("gulp-webserver");
 function up() {
   return gulp.src('.')
     .pipe(webserver({
-      open: '/#!/main'
+      open: '/#!/contacts'
     }));
 }
 

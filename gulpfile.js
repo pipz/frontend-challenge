@@ -5,7 +5,7 @@ const server      = require("./tasks/server");
 
 /*
 ** @name: dev
-** @description: build used for development
+** @description: task used for development
 */
 gulp.task("server", gulp.series(
   server.up

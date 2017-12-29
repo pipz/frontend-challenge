@@ -1,0 +1,41 @@
+<div>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <md-button hide-gt-sm 
+                class="md-icon-button" 
+                aria-label="Settings" 
+                ng-click="vm.toggleSideNav()">
+                <md-icon md-svg-icon="menu"></md-icon>
+            </md-button>
+            <h1 flex md-truncate>Criar contato</h1>
+        </div>
+    </md-toolbar>
+</div>
+<md-tabs md-selected="vm.tabIndex" 
+    md-stretch-tabs="always"
+    flex>
+    <md-tab label="Detalhes">
+        <div>
+            <md-input-container ng-repeat="field in vm.fields |filter:'Details'"
+                layout="column" flex>
+                <label>{{field.title}}</label>
+                <input ng-model="vm.newContact[field.name]" style="width: 100%;">
+            </md-input-container>
+        </div>
+    </md-tab>
+    <md-tab label="Social">
+        <div>
+            <md-input-container ng-repeat="field in vm.fields |filter:'Social'"
+                layout="column" flex>
+            <label>{{field.name}}</label>
+            <input ng-model="vm.newContact[field.name]" style="width: 100%;">
+            </md-input-container>
+        </div>
+    </md-tab>
+</md-tabs>
+<md-button ng-if="vm.newContact" 
+    class="md-fab md-fab-bottom-right" 
+    aria-label="goToAddUserScreen"
+    ng-click="vm.addUser()">
+    <ng-md-icon icon="add"></ng-md-icon>
+</md-button>

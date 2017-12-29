@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+md-toolbar h1 {
+    font-size: 1.250em;
+    font-weight: 400;
+    margin: auto;
+}
+
+md-toolbar .md-toolbar-tools h1 {
+    font-size: 1.250em;
+    font-weight: 400;
+}
+
+md-list .md-button.selected {
+    color: #03a9f4;
+}
+
+md-sidenav md-list {
+    padding: 0 0 8px 0;
+}
+
+#content {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+
+#content md-icon.avatar {
+    margin-top: 10px;
+}
+
+.avatar {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin: 0px;
+    vertical-align: middle;
+    zoom: 0.7;
+    transform: translateZ(0);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+}
+
+.scrollable-nav-content {
+    position: absolute;
+    top: 136px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+.clickable {
+    cursor: pointer;
+}

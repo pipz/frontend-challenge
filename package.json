@@ -1,36 +1,26 @@
 {
   "name": "frontend-challenge",
   "version": "1.0.0",
-  "description": "Deve-se utilizar nossa API para construir uma simples aplicação WEB.",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yurireeis/frontend-challenge.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yurireeis/frontend-challenge/issues"
-  },
-  "homepage": "https://github.com/yurireeis/frontend-challenge#readme",
+  "author": "Yuri Reis",
+  "license": "MIT",
   "dependencies": {
+    "@uirouter/angularjs": "^1.0.12",
     "angular": "^1.6.8",
     "angular-animate": "^1.6.8",
     "angular-aria": "^1.6.8",
     "angular-material": "^1.1.5",
     "angular-material-icons": "^0.7.1",
     "angular-messages": "^1.6.8",
-    "angular-ui-router": "^1.0.3",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "jsondiffpatch": "^0.2.5",
+    "gulp": "^3.9.1",
     "restangular": "^1.6.1",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "angular-lint": "0.0.2",
     "gulp-webserver": "^0.9.1"
   }
 }

@@ -1,0 +1,58 @@
+<div layout="vertical">
+    <md-sidenav
+        class="md-sidenav-left md-whiteframe-z2"
+        md-component-id="left"
+        md-is-locked-open="$mdMedia('gt-sm')">
+    <md-toolbar ui-sref="app.contacts" class="clickable">
+        <h1>Contatos</h1>
+    </md-toolbar>
+    <div layout-padding>
+        <md-autocomplete 
+            md-search-text="vm.searchText"
+            md-items="item in vm.users | filter:vm.searchText"
+            md-item-text="item.name"
+            md-min-length="3"
+            placeholder="Filtro">
+            <md-item-template>
+                <span md-highlight-text="vm.searchText" 
+                    md-highlight-flags="^i">
+                    {{item.name}}
+                </span>
+            </md-item-template>
+
+        </md-autocomplete>
+    </div>
+    <md-content class="scrollable-nav-content">
+        <md-list>
+            <md-list-item ng-repeat="user in vm.users | filter:vm.searchText | orderBy:'name'"
+                ng-click="vm.selectUser(user)">
+                <div>
+                    <md-icon md-svg-icon="user" class="avatar"></md-icon>
+                    <span>{{user.name}}</span>
+                </div>
+            </md-list-item>
+        </md-list>
+    </md-content>
+    <md-button class="md-fab md-fab-bottom-right" 
+        aria-label="goToAddUserScreen"
+        ui-sref="app.contacts.create">
+        <ng-md-icon icon="add"></ng-md-icon>
+    </md-button>
+</md-sidenav>
+</div>
+
+<div ui-view="content" layout="column" flex>
+    <div>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button hide-gt-sm 
+                    class="md-icon-button" 
+                    aria-label="Settings" 
+                    ng-click="vm.toggleSideNav()">
+                    <md-icon md-svg-icon="menu"></md-icon>
+                </md-button>
+                <h1 flex md-truncate>Agenda de Contatos</h1>
+            </div>
+        </md-toolbar>
+    </div>  
+</div>
