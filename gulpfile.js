@@ -1,12 +1,12 @@
 "use strict";
 
 const gulp        = require("gulp");
-const server      = require("./tasks/server");
+const requireDir  = require("require-dir");
+
+requireDir("./tasks");
 
 /*
 ** @name: dev
 ** @description: task used for development
 */
-gulp.task("server", gulp.series(
-  server.up
-));
+gulp.task("server", ["server.up"]);
